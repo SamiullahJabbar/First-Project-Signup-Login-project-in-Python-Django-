@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Company Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative; /* Added position relative for positioning the logout button */
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .company-info {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .company-info h2 {
+            margin-top: 0;
+        }
+        .company-info p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Assalaam O Alaikum</h1>
+    {% csrf_token %}
+    <a href="{% url 'login' %}">Logout</a>
+</header>
+
+<div class="container">
+    <div class="company-info">
+        <h2>Personal Detail</h2>
+        <p><strong>Name:</strong> SAMIULLAH KHAN</p>
+        <p><strong>Address:</strong>RAFI QAMAR ROAD BWP, ZIP 63100</p>
+        <p><strong>Phone:</strong> +923026592747</p>
+        <p><strong>Email:</strong> samiullahjabbar65@gmail.com</p>
+        <p><strong>Website:</strong> <a href="https://www.example.com">www.example.com</a></p>
+    </div>
+</div>
+
+</body>
+</html>
